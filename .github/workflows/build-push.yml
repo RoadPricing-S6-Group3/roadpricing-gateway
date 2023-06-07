@@ -22,7 +22,7 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x ./gradlew
       - name: Build with Gradle
-        run: ./gradlew build -x test
+        run: ./gradlew bootJar
 
       - name: Login To Registry
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
