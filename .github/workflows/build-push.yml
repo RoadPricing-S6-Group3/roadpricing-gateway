@@ -33,8 +33,8 @@ jobs:
 
       - name: Build RoadPricing-Gateway Image
         working-directory: ./
-        run: docker build -t ${{env.REGISTRY}}/roadpricing-s6-group3/invoice-service:latest .
+        run: docker build -t ${{env.REGISTRY}}/roadpricing-s6-group3/roadpricing-gateway:latest .
 
       - name: Push RoadPricing-Gateway Image
         working-directory: ./
-        run: docker push ${{env.REGISTRY}}/roadpricing-s6-group3/invoice-service:latest
+        run: docker push ${{env.REGISTRY}}/roadpricing-s6-group3/roadpricing-gateway:latest
