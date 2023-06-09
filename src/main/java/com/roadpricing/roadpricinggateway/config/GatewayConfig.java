@@ -10,17 +10,19 @@ public class GatewayConfig {
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route("backend", r -> r.path("/api/**")
+                .route("vehicle", r -> r.path("/api/vehicle/**")
                         .uri("http://vehicle-service:8080"))
-                .route("backend", r -> r.path("/api/**")
+                .route("user", r -> r.path("/api/user/**")
                         .uri("http://user-service:8084"))
-                .route("backend", r -> r.path("/api/**")
+                .route("invoice", r -> r.path("/api/invoice/**")
                         .uri("http://invoice-service:8083"))
-                .route("backend", r -> r.path("/api/**")
+                .route("pricing", r -> r.path("/api/pricing/**")
                         .uri("http://pricing-service:8081"))
-                .route("backend", r -> r.path("/api/**")
+                .route("tracking", r -> r.path("/api/tracking/**")
                         .uri("http://tracking-service:8088"))
-                .route("backend", r -> r.path("/api/**")
+                .route("traveldata", r -> r.path("/api/traveldata/**")
+                        .uri("http://traveldata-service:8085"))
+                .route("traveldata", r -> r.path("/api/route/**")
                         .uri("http://traveldata-service:8085"))
                 .build();
     }
